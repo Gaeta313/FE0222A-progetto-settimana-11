@@ -1,0 +1,16 @@
+<h1 class="text-center my-5">Profilo Utente</h1>
+
+<div *ngIf="utenteLog" class="container">
+  <div class="m-auto card w-50">
+    <img src="{{utenteLog.urlImmagine}}" class="card-img-top m-auto w-50" alt="..." >
+    <div class="card-body">
+        <h5 class="card-title ">{{utenteLog.username}}</h5>
+        <p>Registra il tuo indirizzo per la compilazione automatica nel form del carrello</p>
+      <p class="card-text d-flex justify-content-between" *ngIf="!modifica"><span>{{utenteLog.indirizzo}}</span><button class="btn btn-warning" (click)="modifica = !modifica">Registra Indirizzo</button></p>
+      <p class="card-text d-flex justify-content-between" *ngIf="modifica"><input type="text" [(ngModel)]="utenteLog.indirizzo"><button class="btn btn-primary" (click)="completaModifica()">Fatto</button></p>
+      <div class="card-footer d-flex-column justify-content-center text-center">
+        <a class="link-info"  routerLink="/ordini" routerLinkActive="active">I miei Ordini</a>
+      </div>
+    </div>
+  </div>
+</div>

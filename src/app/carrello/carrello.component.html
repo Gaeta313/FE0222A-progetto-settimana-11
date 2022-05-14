@@ -1,0 +1,65 @@
+<h1  class="text-center my-5">Carrello</h1>
+<div class="container text-center" *ngIf="utenteLog">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let prodotto of utenteLog.carrello;let i = index" class="col">
+      <div class="card h-100">
+        <img [src]= prodotto.urlImmagine class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{prodotto.name}}</h5>
+        </div>
+        <div class="card-footer d-flex-column justify-content-center">
+          <p>{{prodotto.price}}€</p>
+          <button class="btn btn-danger" (click)="elimina(i)">Elimina</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<div *ngIf="utenteLog.carrello.length == 0" >
+    <p >Il Carrello è vuoto</p>
+    <div class="alert alert-info container my-5" role="alert">
+     Se stai cercando un ordine che hai effettuato, cosulta la sezione <a routerLink="/ordini" routerLinkActive="active">I miei ordini</a> accessibile anche dalla pagina <a routerLink="/profilo" routerLinkActive="active">Profilo Utente</a>
+    </div>
+
+</div>
+
+
+
+    <div *ngIf="utenteLog.carrello.length != 0">
+      <form  class="container" (ngSubmit)="submit(f)" #f="ngForm">
+        <div  class="mb-3 form-group">
+          <label for="username" class="form-label">Indirizzo</label>
+          <input type="text" class="form-control" id="username" [ngModel]="utenteLog?.indirizzo" name="indirizzo" required #username="ngModel" >
+        </div>
+        <p *ngIf="username.invalid && username.touched"><strong>Questo campo è
+          obbligatorio!</strong></p>
+        <div class="mb-3 form-group text-start">
+          <label for="password" class="form-label" >Modalità di pagamento :</label>
+          <div>
+            <input type="radio" id="paypal" name="pagamento" value="Paypal"  ngModel #paga="ngModel" required>
+            <label for="paypal">Paypal</label>
+          </div>
+
+          <div >
+            <input type="radio" id="carta" name="pagamento" value="Carta" ngModel #paga="ngModel" required>
+              <label for="carta">Carta</label>
+            <p *ngIf="paga.value == 'Paypal'" >Verrai reindirizzato al sito paypal per il pagamento</p>
+             <div class="w-75 m-auto" *ngIf="paga.value == 'Carta'">
+              <div>
+                <input type="radio" id="master" name="tipo" value="masterCard"  ngModel #tipo="ngModel" required>
+                <label for="master">MasterCard</label>
+              </div>
+              <div>
+                <input type="radio" id="visa" name="tipo" value="visa"  ngModel #tipo="ngModel"  required>
+                <label for="visa">Visa</label>
+              </div>
+               <input type="text" class="form-control" placeholder="N.carta" id="numCarta" ngModel name="nCarta"  required >
+               <input type="text" class="form-control w-25 my-2" placeholder="N.sicurezza"  id="numSicurezza" ngModel name="nSicurezza"  required >
+              </div>
+            </div>
+        </div>
+        <h3 class="text-center">Totale Ordine :{{totale}}€</h3>
+          <button type="submit" class="btn btn-primary my-5"[disabled]="utenteLog?.carrello?.length == 0 || f.invalid">Acquista</button>
+      </form>
+    </div>
+ </div>
+

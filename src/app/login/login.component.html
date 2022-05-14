@@ -1,0 +1,27 @@
+<h1 class="text-center mt-5">Form di Login</h1>
+
+  <form  class="container" (ngSubmit)="submit()" #f="ngForm">
+    <div class="mb-3 form-group">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" class="form-control" id="username" ngModel name="username" required #username="ngModel" >
+    </div>
+    <p *ngIf="username.invalid && username.touched"><strong>Questo campo è
+      obbligatorio!</strong></p>
+    <div class="mb-3 form-group">
+      <label for="password" class="form-label" >Password</label>
+      <input type="password" class="form-control" id="password" ngModel name="password" required #password="ngModel">
+    </div>
+    <p *ngIf="password.invalid && password.touched"><strong>Questo campo è
+      obbligatorio!</strong></p>
+    <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Login</button>
+    <div *ngIf="successo" class="alert alert-success" role="alert">
+      Login effettuato con successo
+    </div>
+    <div *ngIf="errore" class="alert alert-danger" role="alert">
+      Nome utente e password non validi
+    </div>
+  </form>
+  <div class="alert alert-info container my-5" role="alert">
+    Se non sei registrato, puoi farlo cliccando <a routerLink="/registrati" routerLinkActive="active">qui</a>
+  </div>
+

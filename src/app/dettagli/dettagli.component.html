@@ -1,0 +1,20 @@
+<h2 class="text-center my-5">Dettagli Prodotto</h2>
+<app-spinner *ngIf="!prodotto"></app-spinner>
+<div *ngIf="prodotto" class="container">
+  <div class="m-auto card w-50">
+    <img src={{prodotto.urlImmagine}} class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title d-flex justify-content-between"><span>{{prodotto.name}}</span><span [style.color]="'green'">{{prodotto.price}} €</span></h5>
+      <p class="card-text">{{prodotto.description}}</p>
+      <div class="card-footer d-flex-column justify-content-center text-center">
+        <p *ngIf="!utenteLog"[style.color]="'red'">Devi essere loggato per poter aggiungere un prodotto al carrello</p>
+        <button class="btn btn-primary" (click)="aggiungi(prodotto)" [disabled]="!utenteLog">Aggiungi al Carrello</button>
+        <div *ngIf="successo" class="alert alert-success my-2" role="alert">
+          Prodotto aggiunto al carrello
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+

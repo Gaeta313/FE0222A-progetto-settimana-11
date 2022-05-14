@@ -1,0 +1,23 @@
+
+<h1 class="text-center mt-5">Form di Registrazione</h1>
+
+  <form  class="container" (ngSubmit)="submit()" #f="ngForm">
+    <div class="mb-3 form-group">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" class="form-control" id="username" ngModel name="username" required #username="ngModel" >
+    </div>
+    <p *ngIf="username.invalid && username.touched"><strong>Questo campo è
+      obbligatorio!</strong></p>
+      <p *ngIf="invalidName"><strong>Questo nome utente è già utilizzato</strong> </p>
+    <div class="mb-3 form-group">
+      <label for="password" class="form-label" >Password</label>
+      <input type="password" class="form-control" id="password" ngModel name="password" required #password="ngModel">
+    </div>
+    <p *ngIf="password.invalid && password.touched"><strong>Questo campo è
+      obbligatorio!</strong></p>
+    <button type="submit" class="btn btn-primary" [disabled]="f.invalid || invalidName">Iscriviti</button>
+    <div *ngIf="successo" class="alert alert-success" role="alert">
+      Registrazione avvenuta con successo
+    </div>
+  </form>
+

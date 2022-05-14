@@ -1,0 +1,17 @@
+<h1 class="text-center my-5">Prodotti</h1>
+<app-spinner *ngIf="!prodotti"></app-spinner>
+<div class="container" *ngIf="prodotti">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let prodotto of prodotti" class="col">
+      <div class="card h-100">
+        <img [src]= prodotto.urlImmagine class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{prodotto.name}}</h5>
+        </div>
+        <div class="card-footer d-flex justify-content-center">
+          <a class="link-info" [routerLink]="['/prodotti',prodotto.id]">Dettagli</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

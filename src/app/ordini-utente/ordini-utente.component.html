@@ -1,0 +1,30 @@
+<h1 class="text-center">I Miei Ordini</h1>
+<p class="text-center" *ngIf="ordini.length == 0">Non ci sono Ordini</p>
+<div *ngIf="utenteLog" class="container">
+
+  <div *ngFor="let ordine of ordini" class="m-auto card w-50 my-5">
+    <div>
+      <div class="container text-center" >
+        <h3>Prodotto/i acquistati</h3>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div *ngFor="let prodotto of ordine.acquisti;let i = index" class="col">
+            <div class="card h-100">
+              <img [src]="prodotto.urlImmagine" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{prodotto.name}}</h5>
+              </div>
+              <div class="card-footer d-flex-column justify-content-center">
+                <p>{{prodotto.price}}€</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title ">Totale ordine: {{ordine.totale}}€</h5>
+        <p>Data Ordine : {{ordine.data}}</p>
+        <p>Indirizzo di spedizione : {{ordine.indirizzo}}</p>
+        <p>Pagato con : {{ordine.metodoDiPagamento}}</p>
+    </div>
+  </div>
+</div>
