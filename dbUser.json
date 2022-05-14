@@ -8,16 +8,8 @@
       "urlImmagine": "../../assets/img/fotoProfilo.jpg",
       "carrello": [],
       "id": 1
-    },
-    {
-      "username": "Nicola",
-      "password": "2222",
-      "login": true,
-      "indirizzo": "",
-      "urlImmagine": "../../assets/img/fotoProfilo.jpg",
-      "carrello": [],
-      "id": 2
     }
+
   ],
   "orders": []
 }
