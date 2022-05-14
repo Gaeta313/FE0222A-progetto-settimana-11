@@ -14,6 +14,8 @@ import { CarrelloComponent } from './carrello/carrello.component';
 import { ProfiloUtenteComponent } from './profilo-utente/profilo-utente.component';
 import { OrdiniUtenteComponent } from './ordini-utente/ordini-utente.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { AutorizzazioneGuard } from './autorizzazione.guard';
+
 
 
 const routes = [
@@ -35,14 +37,17 @@ const routes = [
   },
   {
     path:'carrello',
+    canActivate:[AutorizzazioneGuard],
     component: CarrelloComponent
   },
   {
     path:'profilo',
+    canActivate:[AutorizzazioneGuard],
     component: ProfiloUtenteComponent
   },
   {
     path:'ordini',
+    canActivate:[AutorizzazioneGuard],
     component: OrdiniUtenteComponent
   }
 

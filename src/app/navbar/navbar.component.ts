@@ -29,6 +29,7 @@ export class NavbarComponent implements OnInit {
       this.utenteLog.login = false;
       this.userSrv.putUtente(this.utenteLog.id!, this.utenteLog).subscribe((val) => {
           this.userSrv.utenteLog.next(undefined);
+          localStorage.removeItem('AmaSonGuard');
           this.router.navigate(['/'])
         });
     }

@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   utentelog!:Utente|undefined;  // qui viene appoggiato l'utente per la modifica(put) nel dbUser.jason
   subGet!:Subscription;  // sottoscrizione alla get utention
   users!:Utente[];    // qui vengono appoggiati tutti gli utenti
+  guard!:string    //utilizzato per la guard, che impedisce la navigazione tramite barra degli indirizzi verso le pagine vietate
 
   constructor(private userSrv: UserSrvService, private router:Router) { }
 
@@ -32,6 +33,8 @@ export class LoginComponent implements OnInit {
     if(this.utentelog){
       this.successoTime();
       this.utentelog.login= true;
+      this.guard = 'Sono una guardia dilettante';
+      localStorage.setItem('AmaSonGuard',this.guard)   // creo un sofisticatissimo sistema di sicurezza, per proteggere la navigazione nelle pagine vietate, a prova di Cia, vedere "autorizzazione.guard.ts"
       this.userSrv.utenteLog.next(this.utentelog);
       this.userSrv.putUtente(this.utentelog.id!, this.utentelog).subscribe(val=>{
         this.router.navigate(['/'])
