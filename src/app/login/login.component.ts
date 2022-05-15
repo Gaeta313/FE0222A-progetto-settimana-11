@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       this.successoTime();
       this.utentelog.login= true;
       this.guard = 'Sono una guardia dilettante';
-      localStorage.setItem('AmaSonGuard',this.guard)   // creo un sofisticatissimo sistema di sicurezza, per proteggere la navigazione nelle pagine vietate, a prova di Cia, vedere "autorizzazione.guard.ts"
+      localStorage.setItem('AmaSonGuard',this.guard)   // creo un variabile nel local storage che la guardia usa per proteggere la navigazione nelle pagine vietate(tramite inserimento url), "a prova di Cia", vedere "autorizzazione.guard.ts"
       this.userSrv.utenteLog.next(this.utentelog);
       this.userSrv.putUtente(this.utentelog.id!, this.utentelog).subscribe(val=>{
         this.router.navigate(['/'])
