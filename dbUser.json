@@ -3,7 +3,7 @@
     {
       "username": "Marco",
       "password": "1111",
-      "login": true,
+      "login": false,
       "indirizzo": "via verdi",
       "urlImmagine": "../../assets/img/fotoProfilo.jpg",
       "carrello": [],
