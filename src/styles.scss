@@ -1,2 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/scss/bootstrap"
+@import "~bootstrap/scss/bootstrap";
+
+body{
+  background-image: url("/assets/img/4961754-sfondo-olografico-colorato-gratuito-vettoriale.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+

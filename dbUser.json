@@ -3,12 +3,87 @@
     {
       "username": "Marco",
       "password": "1111",
-      "login": false,
-      "indirizzo": "Via Cristoforo Colombo,59,Milano",
+      "login": true,
+      "indirizzo": "via verdi",
       "urlImmagine": "../../assets/img/fotoProfilo.jpg",
       "carrello": [],
       "id": 1
+    },
+    {
+      "username": "Filippo",
+      "password": "3333",
+      "login": false,
+      "indirizzo": "viao roma,napoli",
+      "urlImmagine": "../../assets/img/fotoProfilo.jpg",
+      "carrello": [],
+      "id": 2
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "acquisti": [
+        {
+          "id": 1,
+          "name": "SAMSUNG Galaxy S 22",
+          "price": 779,
+          "description": "Samsung Galaxy S22 5G è uno smartphone Android con caratteristiche all'avanguardia che lo rendono una scelta eccellente per ogni tipo di utilizzo, rappresentando uno dei migliori dispositivi mobili mai realizzati. Dispone di un grande display da 6.1 pollici e di una risoluzione da 2340x1080 pixel, fra le più elevate attualmente in circolazione. Le funzionalità offerte da questo Samsung Galaxy S22 5G sono innumerevoli e tutte al top di gamma. A cominciare dal modulo 5G che permette un trasferimento dati e una navigazione in internet eccellente, passando per la connettività Wi-fi e il GPS.L'eccellenza di questo Samsung Galaxy S22 5G è completata da una fotocamera con un sensore da ben 50 megapixel che permette di scattare foto di alta qualità con una risoluzione di 8165x6124 pixel e di registrare video in 8K alla risoluzione di 7680x4320 pixel. Lo spessore di 7.6mm è veramente contenuto e rende questo Samsung Galaxy S22 5G ancora più spettacolare. ",
+          "urlImmagine": "../../assets/img/samsung0.jpg"
+        },
+        {
+          "id": 1,
+          "name": "SAMSUNG Galaxy S 22",
+          "price": 779,
+          "description": "Samsung Galaxy S22 5G è uno smartphone Android con caratteristiche all'avanguardia che lo rendono una scelta eccellente per ogni tipo di utilizzo, rappresentando uno dei migliori dispositivi mobili mai realizzati. Dispone di un grande display da 6.1 pollici e di una risoluzione da 2340x1080 pixel, fra le più elevate attualmente in circolazione. Le funzionalità offerte da questo Samsung Galaxy S22 5G sono innumerevoli e tutte al top di gamma. A cominciare dal modulo 5G che permette un trasferimento dati e una navigazione in internet eccellente, passando per la connettività Wi-fi e il GPS.L'eccellenza di questo Samsung Galaxy S22 5G è completata da una fotocamera con un sensore da ben 50 megapixel che permette di scattare foto di alta qualità con una risoluzione di 8165x6124 pixel e di registrare video in 8K alla risoluzione di 7680x4320 pixel. Lo spessore di 7.6mm è veramente contenuto e rende questo Samsung Galaxy S22 5G ancora più spettacolare. ",
+          "urlImmagine": "../../assets/img/samsung0.jpg"
+        }
+      ],
+      "data": "2022-05-16T08:49:52.998Z",
+      "idUtente": 1,
+      "indirizzo": "via verdi",
+      "metodoDiPagamento": "Paypal",
+      "totale": 1558,
+      "id": 1
+    },
+    {
+      "acquisti": [
+        {
+          "id": 1,
+          "name": "SAMSUNG Galaxy S 22",
+          "price": 779,
+          "description": "Samsung Galaxy S22 5G è uno smartphone Android con caratteristiche all'avanguardia che lo rendono una scelta eccellente per ogni tipo di utilizzo, rappresentando uno dei migliori dispositivi mobili mai realizzati. Dispone di un grande display da 6.1 pollici e di una risoluzione da 2340x1080 pixel, fra le più elevate attualmente in circolazione. Le funzionalità offerte da questo Samsung Galaxy S22 5G sono innumerevoli e tutte al top di gamma. A cominciare dal modulo 5G che permette un trasferimento dati e una navigazione in internet eccellente, passando per la connettività Wi-fi e il GPS.L'eccellenza di questo Samsung Galaxy S22 5G è completata da una fotocamera con un sensore da ben 50 megapixel che permette di scattare foto di alta qualità con una risoluzione di 8165x6124 pixel e di registrare video in 8K alla risoluzione di 7680x4320 pixel. Lo spessore di 7.6mm è veramente contenuto e rende questo Samsung Galaxy S22 5G ancora più spettacolare. ",
+          "urlImmagine": "../../assets/img/samsung0.jpg"
+        }
+      ],
+      "data": "2022-05-17T08:42:18.668Z",
+      "idUtente": 2,
+      "indirizzo": "Via verdi",
+      "metodoDiPagamento": "Paypal",
+      "totale": 779,
+      "id": 2
+    },
+    {
+      "acquisti": [
+        {
+          "id": 2,
+          "name": "APPLE Iphone 13",
+          "price": 799,
+          "description": "Apple iPhone 13 è uno smartphone iOS con caratteristiche all'avanguardia che lo rendono una scelta eccellente per ogni tipo di utilizzo. Dispone di un grande display da 6.1 pollici e di una risoluzione da 2532x1170 pixel, fra le più elevate attualmente in circolazione. Le funzionalità offerte da questo Apple iPhone 13 sono innumerevoli e al top di gamma. A cominciare dal modulo 5G che permette un trasferimento dati e una navigazione in internet eccellente, passando per la connettività Wi-fi e il GPS.Fotocamera da 12 megapixel. Lo spessore di 7.7mm è veramente contenuto e rende questo Apple iPhone 13 ancora più spettacolare. ",
+          "urlImmagine": "../../assets/img/iphone13.jpg"
+        },
+        {
+          "id": 2,
+          "name": "APPLE Iphone 13",
+          "price": 799,
+          "description": "Apple iPhone 13 è uno smartphone iOS con caratteristiche all'avanguardia che lo rendono una scelta eccellente per ogni tipo di utilizzo. Dispone di un grande display da 6.1 pollici e di una risoluzione da 2532x1170 pixel, fra le più elevate attualmente in circolazione. Le funzionalità offerte da questo Apple iPhone 13 sono innumerevoli e al top di gamma. A cominciare dal modulo 5G che permette un trasferimento dati e una navigazione in internet eccellente, passando per la connettività Wi-fi e il GPS.Fotocamera da 12 megapixel. Lo spessore di 7.7mm è veramente contenuto e rende questo Apple iPhone 13 ancora più spettacolare. ",
+          "urlImmagine": "../../assets/img/iphone13.jpg"
+        }
+      ],
+      "data": "2022-05-17T08:42:58.692Z",
+      "idUtente": 2,
+      "indirizzo": "viao roma,napoli",
+      "metodoDiPagamento": "Paypal",
+      "totale": 1598,
+      "id": 3
+    }
+  ]
 }
